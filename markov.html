@@ -1,0 +1,36 @@
+<html>
+
+  <head>
+  
+    <title>Markov Chains in Javascript</title>
+    <script type="text/javascript" src="utils.js"></script>
+    <script type="text/javascript" src="markov.js"></script>
+    <script type="text/javascript" src="init.js"></script>
+    
+    <style type="text/css">
+      #top, #contents {
+        margin: 20px;
+        padding: 10px;
+      }
+      #contents {
+        border: 1px solid silver;
+        height: 100%;
+      }
+      
+    </style>
+  </head>
+
+  <body onload="init()">
+    <div id="top">
+      <form>
+        <label for="file-input">Choose a text file: </label>
+        <input type="file" id="file-input" size="60"/><br />
+        <label for="num-words">Max number of words to generate: </label>
+        <input id="num-words" size="4" maxlength="4"><br />
+        <button type="button" onclick="displayFile()">Generate</button>
+      </form>
+    </div>
+    <div id="contents">
+    </div>
+  </body>
+</html>
