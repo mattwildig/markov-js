@@ -4,12 +4,12 @@ function init() {
 
 function displayFile() {
   var file = document.getElementById("file-input").files[0];
-  var maxwords = parseInt(document.getElementById("value"));
+  var maxwords = parseInt(document.getElementById("num-words").value);
   
   var reader = new FileReader();
   
   reader.onload = function() {
-    var generated = getMarkov(this.result, 500);
+    var generated = getMarkov(this.result, maxwords);
     var txtNode = document.createTextNode(generated);
     var contentDiv = document.getElementById("contents");
     contentDiv.removeAllChildren();
